@@ -56,10 +56,21 @@ namespace CPW211_UnitTestStarterCode.Tests
         [DataRow(20, 5)]
         public void Divide_TwoNumbers_ReturnsQuotient(double num1, double num2)
         {
-            double expected = num1 / num2;
-            double actual = SimpleMath.Divide(num1, num2);
-            Assert.AreEqual(expected, actual);
+            double expected = num1 / num2; //expected quotient from the num1 and num2
+            double actual = SimpleMath.Divide(num1, num2); //nethod call for num1 and num2
+            Assert.AreEqual(expected, actual); //check if expected and actual are the same
         }
         // TODO: Test subtract method with two valid numbers
+        [TestMethod]
+        [DataRow(5, 5)]
+        [DataRow(10, 5)]
+        [DataRow(100, 5)]
+        [DataRow(47, 35)]
+        public void Subtract_TwoNumbers_ReturnsDifference(double num1, double num2)
+        {
+            double expected = num1 - num2; //subtract dataRow parameters
+            double actual = SimpleMath.Subtract(num1, num2); //use method to process datarow
+            Assert.AreEqual(expected, actual); //compare expected and actual for results
+        }
     }
 }
